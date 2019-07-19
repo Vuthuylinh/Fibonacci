@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci series</title>
+</head>
+<body>
+<p> Print Fibonacci series below number </p>
+<script>
+    function printFibonacci(number) {
+        if(number<=1){
+            return [];
+        }else{
+            let arr=[0,1];
+            let i=0;
+            while((arr[i]+arr[i+1])<number){
+                let sum=arr[i]+arr[i+1];
+                arr.push(sum);
+                i++;
+            }
+            return  arr;
+        }
+    }
+    number=parseInt(prompt("Enter a number: "));
+   let arr1=printFibonacci(number);
+   for (i=0;i<arr1.length;i++){
+       document.write(arr1[i]+"; ");
+   }
+
+
+</script>
+</body>
+</html>

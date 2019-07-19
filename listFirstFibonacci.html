@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<script>
+    function listFirstNumberOfFebonacci(number) {
+        let result=[0,1];
+        for(i=0;i<number;i++){
+        result.push(result[i]+result[i+1]);
+        }
+        return result;
+    }
+    let number=parseInt(prompt("Enter a number: "));
+    let result1= listFirstNumberOfFebonacci(number);
+    for(let i=0;i<result1.length-2;i++){
+        document.write(result1[i]+ "; ");
+    }
+</script>
+</body>
+</html>
